@@ -24,7 +24,7 @@ spec:
           - key: nginx.conf
             path: configmap/nginx.conf
       - downwardAPI:
-        items:
-        - path: "podname"
-          fieldRef:
-            fieldPath: metadata.name
+          items:
+          - path: "podname"
+            fieldRef:
+              fieldPath: metadata.name
