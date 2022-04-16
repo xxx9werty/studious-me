@@ -19,12 +19,12 @@ spec:
           - key: username
             path: secret/username.txt
       - configMap:
-        name: sample-configmap
-        items: 
-        - key: nginx.conf
-          path: configmap/nginx.conf
+          name: sample-configmap
+          items: 
+          - key: nginx.conf
+            path: configmap/nginx.conf
       - downwardAPI:
-        name: 
+        items:
         - path: "podname"
           fieldRef:
             fieldPath: metadata.name
