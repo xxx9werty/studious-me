@@ -14,5 +14,5 @@ spec:
   storageClassName: manual # StorageClass
   # PersistentVolume 플로그인별 설정(GCE Persistent Disk 예)
   gcePersistentDisk:
-    pdName: k8s-disk
+    pdName: sample-gce-pv
     fsType: ext4
