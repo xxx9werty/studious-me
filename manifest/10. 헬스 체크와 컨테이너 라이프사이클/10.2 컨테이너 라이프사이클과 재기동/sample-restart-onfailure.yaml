@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-restart-onfailure
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: nginx-container
+    image: nginx:1.16
+    command: ["sh", "-c", "exit 0"] # 성공의 경우
+    # command: ["sh", "-c", "exit 1"] # 실패의 경우
